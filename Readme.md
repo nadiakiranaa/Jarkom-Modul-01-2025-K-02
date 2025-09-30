@@ -105,6 +105,16 @@ Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melk
 (link file) `nc 10.15.43.32 3404`
 
 # Penyelesaian
+A. Pilih file MelkorPlan2 dan pilih export object -> HTTP
+
+<img width="438" height="573" alt="image" src="https://github.com/user-attachments/assets/fcca626d-18c3-42fb-a3d6-709453c0bdb4" />
+
+- Kemudian ada 3 file, diantara 3 file ini ada malware yaitu `Invoice&MSO-Request.doc`
+
+<img width="611" height="337" alt="image" src="https://github.com/user-attachments/assets/cbddf620-feb2-43fc-b7da-fd04c8bf0528" />
+
+<img width="611" height="337" alt="image" src="https://github.com/user-attachments/assets/cbddf620-feb2-43fc-b7da-fd04c8bf0528" />
+
 - Pertama ketik di terminal `nc 10.15.43.32 3404`
 
 <img width="500" height="185" alt="image" src="https://github.com/user-attachments/assets/dceb2bb7-e45a-4895-ae61-c52870d8b6ad" />
@@ -157,6 +167,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
