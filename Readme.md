@@ -111,6 +111,34 @@ Manwe mengirimkan email berisi surat cinta kepada Varda melalui koneksi yang tid
 # Penyelesaian
 
 
+# Soal_20
+Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file berbahaya kemudian menyembunyikannya agar tidak terlihat oleh Eru. Tetapi Manwe yang sudah merasakan adanya niat jahat dari Melkor, ia menyisipkan bantuan untuk mengungkapkan rencana Melkor. Analisis file capture dan identifikasi kegunaan bantuan yang diberikan oleh Manwe untuk menggagalkan rencana jahat Melkor selamanya.
+(link file) `nc 10.15.43.32 3407`
+
+# Penyelesaian
+- Download file dari soal, lalu masuk ke edit->protocol->TLS->kemudian msukkan file yang telah di download tadi (file yg pertama)
+<img width="364" height="631" alt="image" src="https://github.com/user-attachments/assets/15844971-4a0f-4f63-ae6a-57b0ee043a66" />
+
+<img width="820" height="578" alt="image" src="https://github.com/user-attachments/assets/b8a04111-a8b7-4abb-a5ab-9cccd351f26d" />
+
+- Kemudian search HTTP
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/4b18f17a-d640-46cc-881e-6b790b01eac6" />
+
+- Kemudian pilih file -> export object -> HTTP -> pilih file invest_2.dll
+
+<img width="432" height="536" alt="image" src="https://github.com/user-attachments/assets/996f2b5b-ae25-4f73-b6e8-258cd6e20d03" />
+
+<img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
+
+- kemudian save file yang terhubung di kali-linux, 
+
+
+
+
+
+
+
 
 
 
