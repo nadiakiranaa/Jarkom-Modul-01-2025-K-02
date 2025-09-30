@@ -164,13 +164,6 @@ D. Hasil dari kedua hash file
 
 <img width="540" height="208" alt="image" src="https://github.com/user-attachments/assets/209441cf-ee15-4040-8d86-5386f70135b8" />
 
-
-![WhatsApp Image 2025-09-30 at 14 00 08_458d0760](https://github.com/user-attachments/assets/b48c7626-3179-44ac-9f23-4f283d9d9781)
-
-![WhatsApp Image 2025-09-30 at 14 00 57_207223be](https://github.com/user-attachments/assets/dae1cf19-0648-4415-8e3f-4fd1f94ca6a3)
-
-![WhatsApp Image 2025-09-30 at 14 24 06_453fa819](https://github.com/user-attachments/assets/9e4d790d-6fc8-4894-9126-e058a8bec2b1)
-
 ![WhatsApp Image 2025-09-30 at 14 24 34_9960af0c](https://github.com/user-attachments/assets/a68b2ad2-bf31-44de-9355-69b520ec99dc)
 
 # Soal_19
@@ -201,6 +194,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
