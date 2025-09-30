@@ -27,7 +27,9 @@ Answer: `500358`
 B. Bagian selanjutnya yaitu memasukkan username dan password 
 "What are the user that successfully logged in?"
 
-Answer: `n1enna:y4v4nn4_k3m3nt4r1`
+Answer: `-Username :n1enna`
+        `-Password: y4v4nn4_k3m3nt4r1`
+        
 - Jadi kita cari username & passwordnya dengan pilih salah satu trafic (follow http stream) dan akan muncul username& passwordnya
 
 <img width="604" height="373" alt="image" src="https://github.com/user-attachments/assets/2d5d913d-1113-4041-a5d7-ca377dcb868f" />
@@ -36,9 +38,11 @@ Answer: `n1enna:y4v4nn4_k3m3nt4r1`
 <img width="497" height="73" alt="image" src="https://github.com/user-attachments/assets/00a48fac-d81d-4429-96e4-64f761e36c14" />
 
 C. Selanjutnya kita di minta untuk mencari dimana kridensial nya 
+
 "In which stream were the credentials found?"
 
 Answer: `41824`
+- Username & Password muncul di stream 41824 (di pojok kanan bawah)
 
 <img width="407" height="68" alt="image" src="https://github.com/user-attachments/assets/797f2811-68f7-47e7-99d2-4f89d8f9b76a" />
 
@@ -136,6 +140,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
