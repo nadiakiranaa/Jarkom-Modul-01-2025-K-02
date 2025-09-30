@@ -61,8 +61,9 @@ A. masukkan file yang ada di soal, selanjutnya search `ftp` mencari trafic yang 
 
 <img width="781" height="411" alt="image" src="https://github.com/user-attachments/assets/8f687b54-09f1-4c6a-94d9-91effd2a36ac" />
 
-B. Selanjutnya stream terus hitung file .exe ada berapa 
-(SIZE q.exe,RETR q.exe,SIZE w.exe,RETR w.exe,SIZE e.exe,RETR e.exe,SIZE e.exe,RETR e.exe,SIZE r.exe,RETR r.exe,SIZE t.exe,RETR t.exe)
+B. Selanjutnya stream terus hitung file .exe ada berapa?
+
+`(SIZE q.exe,RETR q.exe,SIZE w.exe,RETR w.exe,SIZE e.exe,RETR e.exe,SIZE e.exe,RETR e.exe,SIZE r.exe,RETR r.exe,SIZE t.exe,RETR t.exe)`
 
 <img width="1365" height="725" alt="image" src="https://github.com/user-attachments/assets/0dd12147-10f4-4242-af8f-776b2761a80d" />
 
@@ -72,6 +73,7 @@ C. Download `http` file setelah itu di export object
 
 - Setelah itu filter pake `ftp-data`, selanjutnya sesuaikan dengan file .exe dan lakukan stream file.exe 
 - ubah isi file menjadi raw -> save -> transale dengan `sha256sum` 
+
 
 
 
