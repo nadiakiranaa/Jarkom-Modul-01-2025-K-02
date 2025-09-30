@@ -133,6 +133,33 @@ C. Kemudian mendapatkan hasil flag dari knr.exe
 Karena rencana Melkor yang terus gagal, ia akhirnya berhenti sejenak untuk berpikir. Pada saat berpikir ia akhirnya memutuskan untuk membuat rencana jahat lainnya dengan meletakkan file berbahaya lagi tetapi dengan metode yang berbeda. Gagalkan lagi rencana Melkor dengan mengidentifikasi file capture yang disediakan agar dunia tetap aman. 
 (link file) `nc 10.15.43.32 3405`
 # Penyelesaian 
+A. How many files are suspected of containing malware?
+Answer: 2 
+
+- Pilih file `MelkorPlan3`, kemudian export object -> `SMB`
+
+<img width="500" height="549" alt="image" src="https://github.com/user-attachments/assets/36149542-fcd3-4956-8c2b-7fd43b3eab43" />
+
+- Akan ada 7 file yang mengandung malware 
+
+<img width="786" height="576" alt="image" src="https://github.com/user-attachments/assets/22aecc37-1ee9-4cc2-ab26-c067b1938470" />
+
+- Ada 2 file yang mencurigakan yaitu 
+`1. \\WINDOWS\d0p2nc6ka3f.fixh0lhyg4voyfcy_smc2ho_u083urjpphnwlahjwhv_o5c0vf6.exe`
+`2. \\WINDOWS\oiku9bu68cxqenfmcso2aek6t07_guuisqxlnliv8dx2eemqdnhvhyl46l8n.di.exe`
+
+B. File pertama `d0p2nc6ka3f.fixh0lhyg4voyfcy_smc2ho_u083urjpphnwlahjwhv_o5c0vf6.exe` mengandung malware
+
+<img width="793" height="82" alt="image" src="https://github.com/user-attachments/assets/9cb54b2c-8a9b-406e-887c-5b8cec5702c6" />
+
+C. File kedua 
+`oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe`
+
+<img width="675" height="73" alt="image" src="https://github.com/user-attachments/assets/cd13d693-ec31-4dea-8ca7-18540f11d332" />
+
+
+<img width="540" height="208" alt="image" src="https://github.com/user-attachments/assets/209441cf-ee15-4040-8d86-5386f70135b8" />
+
 
 ![WhatsApp Image 2025-09-30 at 14 00 08_458d0760](https://github.com/user-attachments/assets/b48c7626-3179-44ac-9f23-4f283d9d9781)
 
@@ -170,6 +197,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
