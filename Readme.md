@@ -68,6 +68,11 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 
 A. masukkan file yang ada di soal, selanjutnya search `ftp` mencari trafic yang ada username & password
 
+`- USER ind@psg420.com
+- PASS {6r_6e#TfT1p
+`
+
+
 <img width="781" height="411" alt="image" src="https://github.com/user-attachments/assets/8f687b54-09f1-4c6a-94d9-91effd2a36ac" />
 
 B. Selanjutnya stream terus hitung file .exe ada berapa?
@@ -76,12 +81,23 @@ B. Selanjutnya stream terus hitung file .exe ada berapa?
 
 <img width="1365" height="725" alt="image" src="https://github.com/user-attachments/assets/0dd12147-10f4-4242-af8f-776b2761a80d" />
 
-C. Download `http` file setelah itu di export object 
+C. Hasil hash dari file (q.exe) 
+<img width="655" height="82" alt="image" src="https://github.com/user-attachments/assets/9c425bbd-c2ef-4a45-8694-4226bf6291f4" />
 
-<img width="1040" height="676" alt="image" src="https://github.com/user-attachments/assets/cdfbfe67-3244-4cba-ab3a-5d9868536f56" />
+- Selanjutnya cek dengan FTP-Data dengan size q.exe
+- Follow dan akan muncul ASCII lalu pindah ke Raw dan di simpan ke folder MelkorPlan1
 
-- Setelah itu filter pake `ftp-data`, selanjutnya sesuaikan dengan file .exe dan lakukan stream file.exe 
-- ubah isi file menjadi raw -> save -> transale dengan `sha256sum` 
+<img width="1361" height="707" alt="image" src="https://github.com/user-attachments/assets/b8a868bc-065a-45eb-adc6-2f471f62a871" />
+
+- Kemudian jalankan `sha256sum namafile.exe`
+
+<img width="721" height="389" alt="image" src="https://github.com/user-attachments/assets/2ea24945-9e69-49d6-b8b5-77ee1ea089b5" />
+
+- hasil hash dari semua file.exe
+
+<img width="936" height="404" alt="image" src="https://github.com/user-attachments/assets/cdf9842d-bcc5-41c2-8384-fc12fe5314fb" />
+
+
 
 
 # Soal_17
@@ -141,6 +157,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
