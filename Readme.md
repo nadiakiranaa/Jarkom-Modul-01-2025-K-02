@@ -3,7 +3,7 @@
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
 (link file) `nc 10.15.43.32 3401`
 # Penyelesaian
-- Pertama masukkan file yang ada di soal, selanjutnya search `http` mencari yang berhail loggin `POST`
+- Pertama masukkan file yang ada di soal, selanjutnya search `http` mencari yang berhail loggin `POST/login`
 
 ![WhatsApp Image 2025-09-30 at 15 19 50_db8f5e37](https://github.com/user-attachments/assets/ff79e938-879a-4d82-9954-5d31da5e9d22)
 
@@ -15,6 +15,10 @@ A. Masuk ke bagian pertama setelah memsukkan `nc 10.15.43.32 3401` nya yaitu mun
 "How many packets are recorded in the pcapng file?"
 
 Answer: `500358`
+- Mendapatkan 500358 itu dari kita shorting seluruh file shortbf 
+
+<img width="1365" height="720" alt="image" src="https://github.com/user-attachments/assets/3d5483b2-d24b-4938-b15e-b7d48ba8c5c3" />
+
 
 <img width="520" height="75" alt="image" src="https://github.com/user-attachments/assets/056a82db-bb1d-4803-82f4-1c15dee43187" />
 
@@ -24,7 +28,7 @@ B. Bagian selanjutnya yaitu memasukkan username dan password
 "What are the user that successfully logged in?"
 
 Answer: `n1enna:y4v4nn4_k3m3nt4r1`
-- Jadi kita cari username & passwordnya dengan pilih salah satu trafic lalu klik follow dan akan muncul username& passwordnya
+- Jadi kita cari username & passwordnya dengan pilih salah satu trafic (follow http stream) dan akan muncul username& passwordnya
 
 <img width="604" height="373" alt="image" src="https://github.com/user-attachments/assets/2d5d913d-1113-4041-a5d7-ca377dcb868f" />
 
@@ -132,6 +136,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
