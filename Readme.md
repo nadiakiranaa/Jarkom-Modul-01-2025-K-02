@@ -122,9 +122,8 @@ A. Pilih file MelkorPlan2 dan pilih export object -> HTTP
 
 <img width="611" height="337" alt="image" src="https://github.com/user-attachments/assets/cbddf620-feb2-43fc-b7da-fd04c8bf0528" />
 
-<img width="602" height="455" alt="image" src="https://github.com/user-attachments/assets/f8dc8b8a-188c-4932-940d-de1bd8131372" />
+<img width="893" height="595" alt="image" src="https://github.com/user-attachments/assets/cd78e300-6c76-406f-a886-d03ec0e72348" />
 
-<img width="609" height="126" alt="image" src="https://github.com/user-attachments/assets/99c307c7-f018-4a68-8ad1-6e04ecb8396d" />
 
 # Soal_18
 Karena rencana Melkor yang terus gagal, ia akhirnya berhenti sejenak untuk berpikir. Pada saat berpikir ia akhirnya memutuskan untuk membuat rencana jahat lainnya dengan meletakkan file berbahaya lagi tetapi dengan metode yang berbeda. Gagalkan lagi rencana Melkor dengan mengidentifikasi file capture yang disediakan agar dunia tetap aman. 
@@ -167,6 +166,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
