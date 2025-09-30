@@ -68,9 +68,10 @@ Melkor semakin murka ia meletakkan file berbahaya di server milik Manwe. Dari fi
 
 A. masukkan file yang ada di soal, selanjutnya search `ftp` mencari trafic yang ada username & password
 
-`- USER ind@psg420.com
-- PASS {6r_6e#TfT1p
-`
+`- USER ind@psg420.com`
+
+`- PASS {6r_6e#TfT1p`
+
 
 
 <img width="781" height="411" alt="image" src="https://github.com/user-attachments/assets/8f687b54-09f1-4c6a-94d9-91effd2a36ac" />
@@ -118,6 +119,11 @@ A. Pilih file MelkorPlan2 dan pilih export object -> HTTP
 
 <img width="611" height="337" alt="image" src="https://github.com/user-attachments/assets/cbddf620-feb2-43fc-b7da-fd04c8bf0528" />
 
+- untuk mendapatkan hash dari knr.exe dengan sha256shum
+
+<img width="747" height="70" alt="image" src="https://github.com/user-attachments/assets/44f0d56e-c56c-4d49-872a-3d2f4b4ee69e" />
+
+
 C. Kemudian hasil semua pertanyaan menghasilkan flag  
 
 <img width="893" height="595" alt="image" src="https://github.com/user-attachments/assets/cd78e300-6c76-406f-a886-d03ec0e72348" />
@@ -164,6 +170,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
