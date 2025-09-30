@@ -75,6 +75,47 @@ C. Download `http` file setelah itu di export object
 - ubah isi file menjadi raw -> save -> transale dengan `sha256sum` 
 
 
+# Soal_17
+Manwe membuat halaman web di node-nya yang menampilkan gambar cincin agung. Melkor yang melihat web tersebut merasa iri sehingga ia meletakkan file berbahaya agar web tersebut dapat dianggap menyebarkan malware oleh Eru. Analisis file capture untuk menggagalkan rencana Melkor dan menyelamatkan web Manwe.
+(link file) `nc 10.15.43.32 3404`
+
+# Penyelesaian
+- Pertama ketik di terminal `nc 10.15.43.32 3404`
+
+<img width="500" height="185" alt="image" src="https://github.com/user-attachments/assets/dceb2bb7-e45a-4895-ae61-c52870d8b6ad" />
+
+
+<img width="611" height="337" alt="image" src="https://github.com/user-attachments/assets/cbddf620-feb2-43fc-b7da-fd04c8bf0528" />
+
+<img width="602" height="455" alt="image" src="https://github.com/user-attachments/assets/f8dc8b8a-188c-4932-940d-de1bd8131372" />
+
+<img width="609" height="126" alt="image" src="https://github.com/user-attachments/assets/99c307c7-f018-4a68-8ad1-6e04ecb8396d" />
+
+# Soal_18
+Karena rencana Melkor yang terus gagal, ia akhirnya berhenti sejenak untuk berpikir. Pada saat berpikir ia akhirnya memutuskan untuk membuat rencana jahat lainnya dengan meletakkan file berbahaya lagi tetapi dengan metode yang berbeda. Gagalkan lagi rencana Melkor dengan mengidentifikasi file capture yang disediakan agar dunia tetap aman. 
+(link file) `nc 10.15.43.32 3405`
+# Penyelesaian 
+
+![WhatsApp Image 2025-09-30 at 14 00 08_458d0760](https://github.com/user-attachments/assets/b48c7626-3179-44ac-9f23-4f283d9d9781)
+
+![WhatsApp Image 2025-09-30 at 14 00 57_207223be](https://github.com/user-attachments/assets/dae1cf19-0648-4415-8e3f-4fd1f94ca6a3)
+
+![WhatsApp Image 2025-09-30 at 14 24 06_453fa819](https://github.com/user-attachments/assets/9e4d790d-6fc8-4894-9126-e058a8bec2b1)
+
+![WhatsApp Image 2025-09-30 at 14 24 34_9960af0c](https://github.com/user-attachments/assets/a68b2ad2-bf31-44de-9355-69b520ec99dc)
+
+# Soal_19
+Manwe mengirimkan email berisi surat cinta kepada Varda melalui koneksi yang tidak terenkripsi. Melihat hal itu Melkor sipaling jahat langsung melancarkan aksinya yaitu meneror Varda dengan email yang disamarkan. Analisis file capture jaringan dan gagalkan lagi rencana busuk Melkor.
+(link file) `nc 10.15.43.32 3406`
+
+# Penyelesaian
+
+
+
+
+
+
+
 
 
 
