@@ -157,6 +157,10 @@ C. File kedua
 
 <img width="675" height="73" alt="image" src="https://github.com/user-attachments/assets/cd13d693-ec31-4dea-8ca7-18540f11d332" />
 
+D. Hasil dari kedua hash file 
+
+<img width="1352" height="156" alt="image" src="https://github.com/user-attachments/assets/b75ab4b8-f19d-45fe-a6d3-950753237443" />
+
 
 <img width="540" height="208" alt="image" src="https://github.com/user-attachments/assets/209441cf-ee15-4040-8d86-5386f70135b8" />
 
@@ -197,6 +201,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
