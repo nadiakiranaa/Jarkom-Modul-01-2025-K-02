@@ -3,7 +3,11 @@
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
 (link file) `nc 10.15.43.32 3401`
 # Penyelesaian
-Pertama masukkan `nc 10.15.43.32 3401`
+- Pertama masukkan file yang ada di soal, selanjutnya search `http` mencari yang berhail loggin `POST`
+
+![WhatsApp Image 2025-09-30 at 15 19 50_db8f5e37](https://github.com/user-attachments/assets/ff79e938-879a-4d82-9954-5d31da5e9d22)
+
+- Selanjutnya masukkan `nc 10.15.43.32 3401`
 
 ![WhatsApp Image 2025-09-30 at 15 20 22_e002151d](https://github.com/user-attachments/assets/a5b3f772-18e9-45ed-bc45-7165a029b790)
 
@@ -13,9 +17,15 @@ Answer: `500358`
 
 <img width="520" height="75" alt="image" src="https://github.com/user-attachments/assets/056a82db-bb1d-4803-82f4-1c15dee43187" />
 
+
+
 B. Bagian selanjutnya yaitu memasukkan username dan password "What are the user that successfully logged in?"
 
 Answer: `n1enna:y4v4nn4_k3m3nt4r1`
+- Jadi kita cari username & passwordnya dengan pilih salah satu trafic lalu klik follow dan akan muncul username& passwordnya
+
+<img width="604" height="373" alt="image" src="https://github.com/user-attachments/assets/2d5d913d-1113-4041-a5d7-ca377dcb868f" />
+
 
 <img width="497" height="73" alt="image" src="https://github.com/user-attachments/assets/00a48fac-d81d-4429-96e4-64f761e36c14" />
 
@@ -30,6 +40,7 @@ D. Tahap terakhir kita diminta untuk menemukan Alat apa yang digunakan untuk bru
 Answer: `Fuzz Faster U Fool v2.1.0-dev`
 
 <img width="771" height="101" alt="image" src="https://github.com/user-attachments/assets/d69cabdf-67be-40c8-a72a-9069951f0d10" />
+
 
 
 
