@@ -162,6 +162,7 @@ D. Hasil dari kedua hash file
 
 <img width="1352" height="156" alt="image" src="https://github.com/user-attachments/assets/b75ab4b8-f19d-45fe-a6d3-950753237443" />
 
+- Hasil dari file diatas menghasilkan flag seperti dibawah:
 
 ![WhatsApp Image 2025-09-30 at 14 24 34_9960af0c](https://github.com/user-attachments/assets/a68b2ad2-bf31-44de-9355-69b520ec99dc)
 
@@ -193,6 +194,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
