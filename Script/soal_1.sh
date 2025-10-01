@@ -1,0 +1,1 @@
+#tidak memakai script
