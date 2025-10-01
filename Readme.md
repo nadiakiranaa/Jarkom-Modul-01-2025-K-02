@@ -211,6 +211,11 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 (link file) `nc 10.15.43.32 3407`
 
 # Penyelesaian
+- Pergi ke terminal nc 10.15.43.32 3407 lalu muncul pertanyaan "What encryption method is used?" 
+Answer: `TLS`
+
+<img width="506" height="196" alt="image" src="https://github.com/user-attachments/assets/3c611396-0bff-437d-b4e7-75639166a4fc" />
+
 - Download file dari soal, lalu masuk ke edit->protocol->TLS->kemudian msukkan file yang telah di download tadi (file yg pertama)
 <img width="364" height="631" alt="image" src="https://github.com/user-attachments/assets/15844971-4a0f-4f63-ae6a-57b0ee043a66" />
 
@@ -227,6 +232,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
