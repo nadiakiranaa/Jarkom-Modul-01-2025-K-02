@@ -212,6 +212,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 
 # Penyelesaian
 - Pergi ke terminal nc 10.15.43.32 3407 lalu muncul pertanyaan "What encryption method is used?" 
+
 Answer: `TLS`
 
 <img width="506" height="196" alt="image" src="https://github.com/user-attachments/assets/3c611396-0bff-437d-b4e7-75639166a4fc" />
@@ -229,9 +230,22 @@ Answer: `TLS`
 
 <img width="432" height="536" alt="image" src="https://github.com/user-attachments/assets/996f2b5b-ae25-4f73-b6e8-258cd6e20d03" />
 
+- Mencari file berbahayannya 
+
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
-- kemudian save file yang terhubung di kali-linux, 
+- selanjutnya ketemu file berbahaya yang menggandung malware ada di file `invest_20.dll`
+
+<img width="644" height="135" alt="image" src="https://github.com/user-attachments/assets/2c6a18c3-29a1-45c0-864b-5a92073ac2d4" />
+
+- Ada hash dari file invest_20.dll 
+<img width="913" height="80" alt="image" src="https://github.com/user-attachments/assets/f3444d6f-9691-4821-b6ff-1bf216abed06" />
+
+- Menghasilkan flag 
+<img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
+
+
 
 
 
