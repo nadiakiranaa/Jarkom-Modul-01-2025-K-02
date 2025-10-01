@@ -1,4 +1,4 @@
-//nc 10.15.43.32 3403//
+nc 10.15.43.32 3403
 
  //search ftp mencari trafic yang ada username & password//
  //- USER ind@psg420.com//
