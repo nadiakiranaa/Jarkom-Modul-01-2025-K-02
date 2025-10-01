@@ -172,9 +172,35 @@ Manwe mengirimkan email berisi surat cinta kepada Varda melalui koneksi yang tid
 
 # Penyelesaian
 A. 
-A. Setelah masuk folder `MelkorPlan4` search `http`cari yang berhasil loggin 
+A. Setelah masuk folder `MelkorPlan4` search `TCP`cari yang berhasil loggin 
 
-![WhatsApp Image 2025-09-30 at 15 19 50_316946b5](https://github.com/user-attachments/assets/057a3f10-f52e-40f7-ac20-ad2ea2038f40)
+<img width="1365" height="723" alt="image" src="https://github.com/user-attachments/assets/5bb9a987-1b1d-4d69-8431-925bf7a43122" />
+
+- selanjutnya ketika kita follow akan muncul username penggirim dan penerima 
+
+<img width="689" height="713" alt="image" src="https://github.com/user-attachments/assets/2f9079e8-4b81-4f82-baad-1d8a69d04691" />
+
+`MAIL FROM: <YourLife36@7162.com>`
+`RCPT TO: <ikwlngpoh@yahoo.com>`
+
+B. selanjutnya yang kita cari mengenai ancaman jika korban tidak membayar (Bitcoin) makan akan ada ancaman yang diberikan dari hacker.
+Answer: `1600`
+
+<img width="469" height="76" alt="image" src="https://github.com/user-attachments/assets/128a3683-5df9-48d4-91f9-84e6134e0e63" />
+
+<img width="383" height="34" alt="image" src="https://github.com/user-attachments/assets/e90a4d40-ffe8-4577-9532-11400ecf17e6" />
+
+B. 
+<img width="1019" height="111" alt="image" src="https://github.com/user-attachments/assets/d58b6852-03df-499b-9fd1-7d831411c641" />
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,6 +226,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
