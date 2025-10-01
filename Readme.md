@@ -171,7 +171,6 @@ Manwe mengirimkan email berisi surat cinta kepada Varda melalui koneksi yang tid
 (link file) `nc 10.15.43.32 3406`
 
 # Penyelesaian
-A. 
 A. Setelah masuk folder `MelkorPlan4` search `TCP`cari yang berhasil loggin 
 
 <img width="1365" height="723" alt="image" src="https://github.com/user-attachments/assets/5bb9a987-1b1d-4d69-8431-925bf7a43122" />
@@ -179,6 +178,10 @@ A. Setelah masuk folder `MelkorPlan4` search `TCP`cari yang berhasil loggin
 - selanjutnya ketika kita follow akan muncul username penggirim dan penerima 
 
 <img width="689" height="713" alt="image" src="https://github.com/user-attachments/assets/2f9079e8-4b81-4f82-baad-1d8a69d04691" />
+
+- Akan muncul pertanyaan mengenai "Siapa yang mengirim pesan ancaman?" 
+
+<img width="430" height="102" alt="image" src="https://github.com/user-attachments/assets/6edf3bfc-cb41-4328-978a-1375b2b8fe5d" />
 
 `MAIL FROM: <YourLife36@7162.com>`
 `RCPT TO: <ikwlngpoh@yahoo.com>`
@@ -190,17 +193,15 @@ Answer: `1600`
 
 <img width="383" height="34" alt="image" src="https://github.com/user-attachments/assets/e90a4d40-ffe8-4577-9532-11400ecf17e6" />
 
-B. 
+C. Selanjutnya ditanya alamat bitcoin penyerang "What is the attacker's bitcoin wallet?"
+
+![WhatsApp Image 2025-09-30 at 15 03 22_9688386a](https://github.com/user-attachments/assets/ada8acc1-8cf4-4c7b-9f2a-08cee7eb00ca)
+
 <img width="1019" height="111" alt="image" src="https://github.com/user-attachments/assets/d58b6852-03df-499b-9fd1-7d831411c641" />
 
+- Hasil nya 
 
-
-
-
-
-
-
-
+<img width="877" height="392" alt="image" src="https://github.com/user-attachments/assets/c1e28159-417c-4052-ac51-1cf4da2cdb60" />
 
 
 
@@ -226,6 +227,7 @@ Untuk yang terakhir kalinya, rencana besar Melkor yaitu menanamkan sebuah file b
 <img width="798" height="574" alt="image" src="https://github.com/user-attachments/assets/289ab0a8-2e02-4f5f-8713-86aeeda47448" />
 
 - kemudian save file yang terhubung di kali-linux, 
+
 
 
 
