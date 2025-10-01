@@ -1,4 +1,108 @@
 # Lapres Jarkom Modul 1 Kelompok K-02
+
+| Nama | NRP |
+| ---------------------- | ---------- |
+| Nadia Kirana Afifah Prahandita | 5027241005 |
+| Arya Bisma Putra Refman | 5027241036 |
+----
+
+## IP Address Host : 10.15.43.32
+
+## The Ainulindalë
+Sebuah kisah awal mula pembentukan dunia telah dibuka. Eru Ilúvatar atau yang nantinya disebut Eru adalah sang pencipta. Eru menciptakan roh-roh abadi yang disebut Ainur. Mereka adalah "anak-anak dari buah pikirannya". Eru meminta para Ainur untuk menciptakan musik agung bersama-sama. Melalui musik ini, sebuah visi tentang dunia yang akan datang (alam semesta) muncul. Ainu terkuat, Melkor, menjadi sombong dan memasukkan tema-tema sumbang dan egois ke dalam musik, menciptakan disonansi. Ini adalah asal mula kejahatan di alam semesta. Manwë Súlimo yang nantinya disebut Manwe adalah Ainu yang paling memahami kehendak Eru. Selama Musik Penciptaan, dialah yang menjadi konduktor utama untuk tema-tema dari Eru, sering kali berkonflik langsung dengan disonansi yang diciptakan Melkor. Ainur lainnya yang terlibat dalam pembentukan alam semesta dan turun ke Arda (Bumi) yaitu Varda Elentári (Varda) dan Ulmo.
+
+### Soal_1
+Untuk mempersiapkan pembuatan entitas selain mereka, Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 akan menuju ke dua Ainur yaitu Melkor dan Manwe. Sedangkan Switch 2 akan menuju ke dua Ainur lainnya yaitu Varda dan Ulmo. Keempat Ainur tersebut diberi perintah oleh Eru untuk menjadi Client.
+
+a. Menghubungkan Eru dengan keempat Ainur melalui 2 switch
+<img width="1232" height="646" alt="Screenshot 2025-09-30 050047" src="https://github.com/user-attachments/assets/422ffad7-c808-4171-b52f-aa5ba2bec2f2" />
+
+### Soal_2
+Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
+
+a. Menghubungkan Eru dengan internet
+<img width="979" height="731" alt="Screenshot 2025-09-30 050151" src="https://github.com/user-attachments/assets/40b8bb5e-2caa-4130-883e-0576f8b0b433" />
+<br><br>
+
+b. Mengatur konfigurasi Eru agar tersambung ke internet
+- Eru
+```
+auto eth0
+iface eth0 inet dhcp
+```
+
+c. Memeriksa apakah Eru sudah tersambung ke internet
+<img width="737" height="565" alt="Screenshot 2025-10-01 221114" src="https://github.com/user-attachments/assets/802fd896-30f7-4bd4-a818-3329de402c89" />
+<br>
+<img width="1097" height="319" alt="Screenshot 2025-09-30 052255" src="https://github.com/user-attachments/assets/8db105d0-aac5-455b-b754-f2e089b886eb" />
+
+### Soal_3
+Sekarang pastikan agar setiap Ainur (Client) dapat terhubung satu sama lain.
+
+a. Mengatur konfigurasi masing-masing node agar dapat terhubung satu sama lain
+- Eru
+```
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+	address 192.212.1.1
+	netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+	address 192.212.2.1
+	netmask 255.255.255.0
+```
+
+- Melkor
+```
+auto eth0
+iface eth0 inet static
+	address 192.212.1.2
+	netmask 255.255.255.0
+	gateway 192.212.1.1
+```
+
+- Manwe
+```
+auto eth0
+iface eth0 inet static
+	address 192.212.1.3
+	netmask 255.255.255.0
+	gateway 192.212.1.1
+```
+
+- Varda
+```
+auto eth0
+iface eth0 inet static
+	address 192.212.2.2
+	netmask 255.255.255.0
+	gateway 192.212.2.1
+```
+
+- Ulmo
+```
+auto eth0
+iface eth0 inet static
+	address 192.212.2.3
+	netmask 255.255.255.0
+	gateway 192.212.2.1
+```
+
+b. Memeriksa apakah setiap ainur dapat terhubung satu sama lain
+<img width="922" height="706" alt="Screenshot 2025-09-30 051303" src="https://github.com/user-attachments/assets/102a8d7e-5a41-4b86-bad5-82328dcb7d01" />
+
+### Soal_4
+Setelah berhasil terhubung, sekarang Eru ingin agar setiap Ainur (Client) dapat mandiri. Oleh karena itu pastikan agar setiap Client dapat tersambung ke internet.
+
+a. 
+
+b. Membuat client di jaringan lokal (eth1 dan eth2) bisa keluar ke internet lewat eth0 menggunakan perintah NAT (Network Address Translation)
+
+
 # Soal_14
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
 (link file) `nc 10.15.43.32 3401`
@@ -243,6 +347,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
