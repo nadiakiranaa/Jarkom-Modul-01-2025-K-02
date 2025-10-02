@@ -213,9 +213,50 @@ user_config_dir=/etc/vsftpd/user_conf → lokasi konfigurasi tambahan per-user.
 - echo "download_enable=NO" >> /etc/vsftpd/user_conf/melkor (user melkor juga tidak boleh download file)
 - service vsftpd restart (Melakukan restart service vsftpd supaya semua konfigurasi yang baru ditambahkan berlaku)
 
+e. Mencoba user ainur di Node Manwe
+<img width="1570" height="655" alt="Screenshot 2025-10-02 134948" src="https://github.com/user-attachments/assets/688281c0-a033-4d75-852d-83fa66f80f0b" />
+<img width="1572" height="712" alt="Screenshot 2025-10-02 135049" src="https://github.com/user-attachments/assets/2b89415c-4b78-48bb-9309-a826805a4405" />
 
+e. Mencoba user melkor di Node Manwe
+<img width="937" height="806" alt="image" src="https://github.com/user-attachments/assets/435abb9c-5fa7-4cbd-b9fa-22a77a03b73c" />
 
+### Soal_8
+Ulmo, sebagai penjaga perairan, perlu mengirimkan data ramalan cuaca ke node Eru. Lakukan koneksi sebagai client dari node Ulmo ke FTP Server Eru menggunakan user ainur. Upload sebuah file berikut ([link file](https://drive.google.com/drive/folders/1XQh6S1xXcaP1QoUhQSZORsgK9xdMUxXx?usp=sharing)). Analisis proses ini menggunakan Wireshark dan identifikasi perintah FTP yang digunakan untuk proses upload.
 
+a. Menginstall file yang isinya berupa zip dan melakukan unzip terhadap file tersebut di dalam Node Ulno
+- apt-get update && apt-get install -y wget ftp
+- wget --no-check-certificate "https://drive.google.com/uc?export=download&id=11ra_yTV_adsPIXeIPMSt0vrxCBZu0r33" -O cuaca.zip
+- unzip cuaca.zip
+
+b. Melakukan capture mengggunakan wireshark untuk di Node Ulmo
+
+c. Mengirimkan file-file (cuaca.txt dan mendung.jpg) yang sudah di unzip tadi
+- ftp
+	- open 192.212.1.1 21
+		- put cuaca.txt
+		- put mendung.jpg
+<img width="1430" height="593" alt="Screenshot 2025-10-02 135951" src="https://github.com/user-attachments/assets/5a306a95-33c2-4ba4-9929-caad4e58432d" />
+
+d. Mengidentifikasi perintah FTP yang digunakan untuk proses upload melalui wireshark
+- Bisa kita lihat dari hasil capture wireshark dibawah, bahwa perintah FTP untuk melakukan apload file cuaca.txt dan mendung.jpg yang kita lakukan tadi adalah STOR
+<img width="1798" height="889" alt="Screenshot 2025-10-02 140740" src="https://github.com/user-attachments/assets/5d1047cb-d64f-4725-815b-00476b190ab1" />
+
+### Soal_9
+Eru ingin membagikan "Kitab Penciptaan" di ([link file](https://drive.google.com/drive/folders/1K1pf8Y1wh_y1f6b57VRtjs3hdkeQUao5?usp=sharing)) kepada Manwe. Dari FTP Server Eru, download file tersebut ke node Manwe. Karena Eru merasa Kitab tersebut sangat penting maka ia mengubah akses user ainur menjadi read-only. Gunakan Wireshark untuk memonitor koneksi, identifikasi perintah FTP yang digunakan, dan uji akses user ainur.
+
+a. Menginstall file yang isinya berupa zip dan melakukan unzip terhadap file tersebut di dalam Node Eru
+- wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=11ua2KgBu3MnHEIjhBnzqqv2RMEiJsILY' -O kitab_penciptaan.zip
+
+b. Memindahkan file zip tersebut kedalam folder shared, lalu mengubah kepemilikan dari file zip tersebut yang awalnya milik root sekarang milik user ainur
+- mv kitab_penciptaan.zip /home/shared/
+- chown ainur:ainur /home/shared/kitab_penciptaan.zip
+
+c. Mengubah akeses dari ainur menjadi read-only
+- chmod 644 /home/shared/kitab_penciptaan.zip
+	- 644:
+		- Owner (ainur): read & write
+		- Group: read
+		- Others: read
 
 
 # Soal_14
@@ -462,6 +503,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
