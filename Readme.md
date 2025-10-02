@@ -251,13 +251,20 @@ b. Memindahkan file zip tersebut kedalam folder shared, lalu mengubah kepemilika
 - mv kitab_penciptaan.zip /home/shared/
 - chown ainur:ainur /home/shared/kitab_penciptaan.zip
 
-c. Mengubah akeses dari ainur menjadi read-only
+c. Mengubah akses dari ainur menjadi read-only
 - chmod 644 /home/shared/kitab_penciptaan.zip
 	- 644:
 		- Owner (ainur): read & write
 		- Group: read
 		- Others: read
 
+d. Mengubah konfigurasi ftp user ainur /etc/vsftpd/user_conf/ainur
+- nano /etc/vsftpd/user_conf/ainur
+	- write_enable=NO
+	- local_root=/home/shared
+	- download_enable=YES
+
+ b. Melakukan capture mengggunakan wireshark untuk di Node Manwe
 
 # Soal_14
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. 
@@ -503,6 +510,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
