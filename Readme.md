@@ -33,7 +33,6 @@ iface eth0 inet dhcp
 
 c. Memeriksa apakah Eru sudah tersambung ke internet
 <img width="737" height="565" alt="Screenshot 2025-10-01 221114" src="https://github.com/user-attachments/assets/802fd896-30f7-4bd4-a818-3329de402c89" />
-<br>
 <img width="1097" height="319" alt="Screenshot 2025-09-30 052255" src="https://github.com/user-attachments/assets/8db105d0-aac5-455b-b754-f2e089b886eb" />
 
 ### Soal_3
@@ -98,9 +97,125 @@ b. Memeriksa apakah setiap ainur dapat terhubung satu sama lain
 ### Soal_4
 Setelah berhasil terhubung, sekarang Eru ingin agar setiap Ainur (Client) dapat mandiri. Oleh karena itu pastikan agar setiap Client dapat tersambung ke internet.
 
-a. 
+a. Masuk ke Node Eru menggunakan telnet
+<img width="1103" height="345" alt="Screenshot 2025-09-30 052303" src="https://github.com/user-attachments/assets/284e2108-e591-4e83-91ac-aed381de0b21" />
 
-b. Membuat client di jaringan lokal (eth1 dan eth2) bisa keluar ke internet lewat eth0 menggunakan perintah NAT (Network Address Translation)
+b. Membuat client di jaringan lokal (eth1 dan eth2) bisa keluar ke internet lewat eth0 menggunakan perintah NAT (Network Address Translation) dan memeriksan konfigurasi DNS resolver di Node Eru
+<img width="1161" height="114" alt="Screenshot 2025-09-30 052501" src="https://github.com/user-attachments/assets/3ce95e7f-aee5-4c25-8466-ef119e94a12d" />
+
+c. Masuk di terminal lain ke Node Client menggunakan telnet lalu menjadikan IP 192.168.122.1(Eru) sebagai DNS resolver utama di masing-masing Client, serta memeriksa apakah masing-masing Client tersebut sudah tersambung ke internet
+<img width="1501" height="742" alt="image" src="https://github.com/user-attachments/assets/f8ec536e-9671-47a7-9252-56ecc4a6bb35" />
+<img width="1521" height="747" alt="image" src="https://github.com/user-attachments/assets/e1cb3480-2dab-46ce-8a76-04e8c05d0a21" />
+<img width="1504" height="756" alt="image" src="https://github.com/user-attachments/assets/6943d89e-9c63-4827-8a36-82a7edcab403" />
+<img width="1501" height="744" alt="image" src="https://github.com/user-attachments/assets/3e3b3de6-9139-40e3-ba59-d185031d7ce4" />
+
+### Soal_5
+Ainur terkuat Melkor tetap berusaha untuk menanamkan kejahatan ke dalam Arda (Bumi). Sebelum terjadi kerusakan, Eru dan para Ainur lainnya meminta agar semua konfigurasi tidak hilang saat semua node di restart.
+
+a. Memasukkan ke dalam root(/root/.bashrc) script yang ingin dijalankan, agar setiap kali Node Eru dibuka menggunakan telnet script tersebut langsung dijalankan
+<img width="1038" height="673" alt="image" src="https://github.com/user-attachments/assets/4d3b0d56-e411-4978-b0cb-98bdff5100a7" />
+
+b. Memasukkan ke dalam konfigurasi di setiap Node Client script yang dijalankan di soal sebelumnya. Hal ini juga bisa kita lakukan sama seperti di Eru, yaitu memasukkan script di dalam root(/root/.bashrc)
+- Melkor
+```
+auto eth0
+iface eth0 inet static
+    address 192.212.1.2
+    netmask 255.255.255.0
+    gateway 192.212.1.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+- Manwe
+```
+auto eth0
+iface eth0 inet static
+    address 192.212.1.3
+    netmask 255.255.255.0
+    gateway 192.212.1.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+- Varda
+```
+auto eth0
+iface eth0 inet static
+    address 192.212.2.2
+    netmask 255.255.255.0
+    gateway 192.212.2.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+- Ulmo
+```
+auto eth0
+iface eth0 inet static
+    address 192.212.2.3
+    netmask 255.255.255.0
+    gateway 192.212.2.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+### Soal_6
+Setelah semua Ainur terhubung ke internet, Melkor mencoba menyusup ke dalam komunikasi antara Manwe dan Eru. Jalankan file berikut ([link file](https://drive.google.com/drive/folders/1ULr_Fik1O0_79zUng41POMZtdzJTugVR?usp=sharing)) lalu lakukan packet sniffing menggunakan Wireshark pada koneksi antara Manwe dan Eru, lalu terapkan display filter untuk menampilkan semua paket yang berasal dari atau menuju ke IP Address Manwe. Simpan hasil capture tersebut sebagai bukti.
+
+a. Di dalam Node Manwe, download zip dari link tersebut dan lakukan unzip pada file zip-nya, serta ubah izin eksekusi dari file tersebut agar bisa dieksekusi, menggunakan:
+- wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1bE3kF1Nclw0VyKq4bL2VtOOt53IC7lG5' -O traffic.zip
+- apt update && apt install zip
+- unzip traffic.zip
+- chmod +x traffic.sh
+
+b. Melakukan capture mengggunakan wireshark untuk melakukan packet sniffing
+
+c. Menjalankan file yang sudah diunzip tadi (traffic.sh)
+- ./traffic.sh
+<img width="1375" height="245" alt="image" src="https://github.com/user-attachments/assets/90e56514-9550-4cff-9091-e161ee4960d5" />
+
+d. Melihat paket yang muncul pada wireshark dan melakukan filter agar yang tampil hanya paket dengan IP Address Manwe
+- ip.addr == 192.212.1.3
+<img width="1466" height="740" alt="image" src="https://github.com/user-attachments/assets/2a97b132-158f-4b73-9f22-3d8b01cf89f6" />
+
+### Soal_7
+Untuk meningkatkan keamanan, Eru memutuskan untuk membuat sebuah FTP Server di node miliknya. Lakukan konfigurasi FTP Server pada node Eru. Buat dua user baru: ainur dengan hak akses write&read dan melkor tanpa hak akses sama sekali ke direktori shared. Buktikan hasil tersebut dengan membuat file teks sederhana kemudian akses file tersebut menggunakan kedua user.
+
+a. Menginstall paket vsftpd agar bisa melakukan perintah ftp
+- apt-get update && apt-get install -y vsftpd
+
+b. Membuat user ainur dan melkor
+- useradd -m ainur
+- echo "ainur:pass123" | chpasswd 
+- useradd -m melkor 
+- echo "melkor:pass123" | chpasswd
+
+c. Membuat direktori shared, dimana user ainur memiliki hak akses write&read, sedangkan melkor tidak memiliki hak akses sama sekali ke direktori shared, serta membuat file baru di shared yang akan digunakan nanti untuk melakukan tes
+- mkdir -p /home/shared 
+- chown ainur:ainur /home/shared: mengubah kepemilikan dari shared ke user ainur
+- echo "Ini file test" > /home/shared/test.txt
+
+d. Mengatur konfigurasi ftp di masing-masing user
+- nano /etc/vsftpd.conf
+```
+listen=YES → vsftpd akan mendengarkan koneksi masuk (daemon aktif).
+listen_ipv6=NO → matikan IPv6 listener, hanya gunakan IPv4.
+anonymous_enable=NO → nonaktifkan login anonim, hanya user terdaftar yang bisa login.
+local_enable=YES → izinkan user lokal (misalnya ainur, melkor) login FTP.
+write_enable=YES → izinkan operasi menulis (upload, rename, delete).
+chroot_local_user=YES → setiap user "dikurung" di home folder-nya (tidak bisa browsing ke luar).
+allow_writeable_chroot=YES → mengizinkan chroot folder tetap bisa ditulis (kalau tidak, sering error permission).
+user_config_dir=/etc/vsftpd/user_conf → lokasi konfigurasi tambahan per-user.
+
+- ini mengatur kebijakan FTP server agar aman (tidak anonim), dan bisa beda aturan per user.
+```
+- mkdir -p /etc/vsftpd/user_conf
+- echo "write_enable=YES" > /etc/vsftpd/user_conf/ainur (user ainur boleh upload/edit file)
+- echo "local_root=/home/shared" >> /etc/vsftpd/user_conf/ainur (direktori root FTP untuk ainur adalah /home/shared)
+- echo "write_enable=NO" > /etc/vsftpd/user_conf/melkor (user melkor tidak boleh upload/ubah file)
+- echo "download_enable=NO" >> /etc/vsftpd/user_conf/melkor (user melkor juga tidak boleh download file)
+- service vsftpd restart (Melakukan restart service vsftpd supaya semua konfigurasi yang baru ditambahkan berlaku)
+
+
+
+
 
 
 # Soal_14
@@ -347,6 +462,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
