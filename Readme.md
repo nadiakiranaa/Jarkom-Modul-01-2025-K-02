@@ -436,7 +436,7 @@ B. What did Melkor write?
 Answer: `UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=`
 
 - install `pip install scapy --break-system-packages`
-- dan menyimpan kode `pyhton.py`
+- dan menyimpan kode `hidden.py`
   `
   from scapy.all import *
 packets = rdpcap('hiddenmsg.pcapng')
@@ -447,6 +447,156 @@ for i in packets:
 <img width="808" height="359" alt="image" src="https://github.com/user-attachments/assets/163badb9-7944-482c-9210-da42d0d6c84a" />
 
 <img width="553" height="545" alt="image" src="https://github.com/user-attachments/assets/92c10cea-59f6-494b-ad22-4ae16324e4c1" />
+
+-setelah itu `nano pyhton.py`
+
+from scapy.all import *
+import sys
+import base64
+
+conf.verb = 0
+
+
+HID_MAP_STANDARD = {
+    0x04: ('a', 'A'), 0x05: ('b', 'B'), 0x06: ('c', 'C'), 0x07: ('d', 'D'),
+    0x08: ('e', 'E'), 0x09: ('f', 'F'), 0x0a: ('g', 'G'), 0x0b: ('h', 'H'),
+    0x0c: ('i', 'I'), 0x0d: ('j', 'J'), 0x0e: ('k', 'K'), 0x0f: ('l', 'L'),
+    0x10: ('m', 'M'), 0x11: ('n', 'N'), 0x12: ('o', 'O'), 0x13: ('p', 'P'),
+    0x14: ('q', 'Q'), 0x15: ('r', 'R'), 0x16: ('s', 'S'), 0x17: ('t', 'T'),
+    0x18: ('u', 'U'), 0x19: ('v', 'V'), 0x1a: ('w', 'W'), 0x1b: ('x', 'X'),
+    0x1c: ('y', 'Y'), 0x1d: ('z', 'Z'),
+    0x1e: ('1', '!'), 0x1f: ('2', '@'), 0x20: ('3', '#'), 0x21: ('4', '$'),
+    0x22: ('5', '%'), 0x23: ('6', '^'), 0x24: ('7', '&'), 0x25: ('8', '*'),
+    0x26: ('9', '('), 0x27: ('0', ')'),
+    0x28: ('\n', '\n'),
+    0x2c: (' ', ' '),
+    0x2d: ('-', '_'), 0x2e: ('=', '+'), 0x2f: ('[', '{'), 0x30: (']', '}'),
+    0x31: ('\\', '|'), 0x33: (';', ':'), 0x34: ("'", '"'), 0x35: ('`', '~'),
+    0x36: (',', '<'), 0x37: ('.', '>'), 0x38: ('/', '?')
+}
+
+CUSTOM_KEY_MAP = {
+    0x18: 'L', 0x0A: 'O', 0x1B: 'O', 0x20: 'K',
+    0x05: 'F', 0x1C: 'O', 0x10: 'R',
+    0x0B: 'T', 0x0D: 'H', 0x15: 'E',
+    0x17: 'D', 0x1D: 'E', 0x06: 'C', 0x19: 'K',
+    # Menambahkan kode-kode umum sebagai spasi atau tombol kontrol (tidak dicetak)
+    0x28: ' ', # ENTER
+    0x2c: ' ', # SPACE
+    0x00: ''   # Release
+}
+
+
+def decode_hid_data(pcap_file, mapping):
+    """
+    Decode USB HID keystroke data from PCAP file using a specified mapping.
+    Logika disempurnakan untuk penanganan spasi.
+    """
+
+    try:
+        packets = rdpcap(pcap_file)
+    except FileNotFoundError:
+        return ""
+
+    decoded_text = []
+    last_keycode = None
+
+    for packet in packets:
+        try:
+            if not packet.haslayer('Raw') or len(packet.load) < 8:
+                continue
+
+            hid_data = packet.load[-8:]
+
+            modifier = hid_data[0]
+            keycode = hid_data[2]
+
+            # --- FILTERING DAN LOGIC SPASI ---
+
+            # Jika tombol saat ini adalah 0 (RELEASE)
+            if keycode == 0:
+                # Tambahkan spasi jika tombol terakhir yang DITEKAN BUKAN tombol berulang,
+                # BUKAN tombol spasi (0x2c), dan BUKAN tombol modifier saja (yang tidak ada keycode)
+                if last_keycode is not None and last_keycode != 0 and last_keycode != 0x2c:
+                    # Ini adalah tempat di mana kata-kata dipisahkan
+                    # Kami hanya menambahkan spasi di antara kata, bukan setelah setiap huruf
+                    if decoded_text and decoded_text[-1] != ' ':
+                        decoded_text.append(' ')
+                last_keycode = keycode
+                continue
+
+            # Jika tombol adalah yang sama dengan sebelumnya (Key Hold), abaikan
+            if keycode == last_keycode:
+                continue
+
+            # --- DEKODE KARAKTER ---
+            if keycode in mapping:
+                char = ''
+                if mapping == HID_MAP_STANDARD:
+                    is_shift = (modifier & 0x02) != 0 or (modifier & 0x20) != 0
+                    char = mapping[keycode][1 if is_shift else 0]
+                elif mapping == CUSTOM_KEY_MAP:
+                    # Untuk pemetaan kustom, kita harus menyaring tombol kontrol
+                    if keycode in [0x28, 0x2c]:
+                        char = mapping[keycode] # Spasi/Enter
+                    elif keycode not in [0x28, 0x2c]:
+                        # Untuk karakter huruf/angka
+                        char = mapping.get(keycode, '')
+
+                if char.strip() or keycode == 0x2c:
+                     decoded_text.append(char)
+
+            last_keycode = keycode
+
+        except Exception as e:
+            continue
+
+    return "".join(decoded_text).strip()
+
+
+def main():
+    if len(sys.argv) < 2:
+        print(f"Usage: python3 {sys.argv[0]} <filename.pcapng>")
+        sys.exit(1)
+
+    pcap_file = sys.argv[1]
+
+    # --- DEKODE KUSTOM (Yang menghasilkan LOOK FOR THE DECK) ---
+    custom_result = decode_hid_data(pcap_file, CUSTOM_KEY_MAP)
+
+    print("\n" + "="*60)
+    print("HASIL AKHIR DEKODE (KUSTOM MAPPING):")
+    print("="*60)
+
+    # Hasil seharusnya sudah bersih
+    final_message = " ".join(custom_result.split())
+
+    # Memastikan format "LOOK FOR THE DECK"
+    if 'LOOK' in final_message and 'DECK' in final_message:
+        print(f"Pesan Tersembunyi: {final_message}")
+    else:
+        # Jika kustom gagal, fallback ke hasil standard (untuk Base64)
+        standard_result = decode_hid_data(pcap_file, HID_MAP_STANDARD)
+        print(f"Pesan Tersembunyi (Cipher/Base64): {standard_result}")
+
+    print("="*60)
+
+
+if __name__ == "__main__":
+    main()
+
+	- munculnya seperti ini 
+	
+	<img width="1333" height="137" alt="image" src="https://github.com/user-attachments/assets/f814a0b5-5bb5-4b94-945b-3eca97dc4630" />
+
+- ini hasilnya 
+
+<img width="661" height="583" alt="image" src="https://github.com/user-attachments/assets/6b941c1b-e524-4861-b92d-9e10af17b3f8" />
+
+<img width="1041" height="112" alt="image" src="https://github.com/user-attachments/assets/ae4a14c8-8b7d-4e0f-aa28-593f15cbf993" />
+
+
+
 
 
 
@@ -640,6 +790,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
