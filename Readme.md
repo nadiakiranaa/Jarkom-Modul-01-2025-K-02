@@ -190,6 +190,7 @@ B. Membuat user ainur dan melkor
 C. Membuat direktori shared, dimana user ainur memiliki hak akses write&read, sedangkan melkor tidak memiliki hak akses sama sekali ke direktori shared, serta membuat file baru di shared yang akan digunakan nanti untuk melakukan tes
 - mkdir -p /home/shared 
 - chown ainur:ainur /home/shared: mengubah kepemilikan dari shared ke user ainur
+- chmod 700 /home/shared
 - echo "Ini file test" > /home/shared/test.txt
 
 D. Mengatur konfigurasi ftp di masing-masing user
@@ -209,6 +210,7 @@ user_config_dir=/etc/vsftpd/user_conf → lokasi konfigurasi tambahan per-user.
 - mkdir -p /etc/vsftpd/user_conf
 - echo "write_enable=YES" > /etc/vsftpd/user_conf/ainur (user ainur boleh upload/edit file)
 - echo "local_root=/home/shared" >> /etc/vsftpd/user_conf/ainur (direktori root FTP untuk ainur adalah /home/shared)
+- echo "local_root=/home/shared" >> /etc/vsftpd/user_conf/melkor
 - echo "write_enable=NO" > /etc/vsftpd/user_conf/melkor (user melkor tidak boleh upload/ubah file)
 - echo "download_enable=NO" >> /etc/vsftpd/user_conf/melkor (user melkor juga tidak boleh download file)
 - service vsftpd restart (Melakukan restart service vsftpd supaya semua konfigurasi yang baru ditambahkan berlaku)
@@ -792,6 +794,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
