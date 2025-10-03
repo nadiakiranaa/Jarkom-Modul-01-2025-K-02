@@ -420,6 +420,38 @@ Answer: `Fuzz Faster U Fool v2.1.0-dev`
 <img width="771" height="101" alt="image" src="https://github.com/user-attachments/assets/d69cabdf-67be-40c8-a72a-9069951f0d10" />
 
 ## Soal_15
+Melkor menyusup ke ruang server dan memasang keyboard USB berbahaya pada node Manwe. Buka file capture dan identifikasi pesan atau ketikan (keystrokes) yang berhasil dicuri oleh Melkor untuk menemukan password rahasia.
+(link file) `nc 10.15.43.32 3402`
+
+A. What device does Melkor use?
+Answer: Keyboard 
+
+<img width="1345" height="655" alt="image" src="https://github.com/user-attachments/assets/70671f9c-1977-47aa-8f0e-afde65908975" />
+
+<img width="482" height="196" alt="image" src="https://github.com/user-attachments/assets/cd8ae73f-0514-4656-9580-f5ee8528d6e2" />
+
+- akan muncul string description ` USB Keyboard`
+
+B. What did Melkor write?
+Answer: `UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=`
+
+- install `pip install scapy --break-system-packages`
+- dan menyimpan kode `pyhton.py`
+  `
+  from scapy.all import *
+packets = rdpcap('hiddenmsg.pcapng')
+for i in packets:
+        print(i.load[-8:])
+`
+
+<img width="808" height="359" alt="image" src="https://github.com/user-attachments/assets/163badb9-7944-482c-9210-da42d0d6c84a" />
+
+<img width="553" height="545" alt="image" src="https://github.com/user-attachments/assets/92c10cea-59f6-494b-ad22-4ae16324e4c1" />
+
+
+
+
+
 
 
 ## Soal_16
@@ -608,6 +640,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
