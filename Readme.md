@@ -449,7 +449,7 @@ for i in packets:
 <img width="553" height="545" alt="image" src="https://github.com/user-attachments/assets/92c10cea-59f6-494b-ad22-4ae16324e4c1" />
 
 -setelah itu `nano pyhton.py`
-
+``
 from scapy.all import *
 import sys
 import base64
@@ -584,6 +584,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+	
+	``
 
 	- munculnya seperti ini 
 	
@@ -790,6 +792,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
