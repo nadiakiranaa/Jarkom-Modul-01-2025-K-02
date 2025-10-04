@@ -9,6 +9,7 @@ useradd -m melkor
 echo "melkor:pass123" | chpasswd
 mkdir -p /home/shared 
 chown ainur:ainur /home/shared 
+chmod 700 /home/shared
 echo "Ini file test" > /home/shared/test.txt
 nano /etc/vsftpd.conf
 listen=YES
@@ -24,6 +25,7 @@ echo "write_enable=YES" > /etc/vsftpd/user_conf/ainur
 echo "local_root=/home/shared" >> /etc/vsftpd/user_conf/ainur
 echo "write_enable=NO" > /etc/vsftpd/user_conf/melkor
 echo "download_enable=NO" >> /etc/vsftpd/user_conf/melkor
+echo "local_root=/home/shared" >> /etc/vsftpd/user_conf/melkor
 service vsftpd restart
 
 # Manwe
