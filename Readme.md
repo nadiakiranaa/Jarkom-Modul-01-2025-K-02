@@ -220,7 +220,8 @@ E. Mencoba user ainur di Node Manwe
 <img width="1572" height="712" alt="Screenshot 2025-10-02 135049" src="https://github.com/user-attachments/assets/2b89415c-4b78-48bb-9309-a826805a4405" />
 
 F. Mencoba user melkor di Node Manwe
-<img width="937" height="806" alt="image" src="https://github.com/user-attachments/assets/435abb9c-5fa7-4cbd-b9fa-22a77a03b73c" />
+
+<img width="668" height="277" alt="image" src="https://github.com/user-attachments/assets/72cbd5b2-87d5-45f7-b0a0-2870168787f2" />
 
 ## Soal_8
 Ulmo, sebagai penjaga perairan, perlu mengirimkan data ramalan cuaca ke node Eru. Lakukan koneksi sebagai client dari node Ulmo ke FTP Server Eru menggunakan user ainur. Upload sebuah file berikut ([link file](https://drive.google.com/drive/folders/1XQh6S1xXcaP1QoUhQSZORsgK9xdMUxXx?usp=sharing)). Analisis proses ini menggunakan Wireshark dan identifikasi perintah FTP yang digunakan untuk proses upload.
@@ -794,6 +795,7 @@ Answer: `TLS`
 
 - Menghasilkan flag 
 <img width="902" height="381" alt="image" src="https://github.com/user-attachments/assets/17e0f047-387f-4354-9b65-35ef2b794297" />
+
 
 
 
